@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+.pmodal,
+.tmodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+}
+
+form.tform {
+    width: 500px;
+}
+
+.formdiv {
+    display: flex;
+    gap: 10px;
+}
+
+.header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-section {
+    padding: 25px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projects-section h1,
+.todo-section h1 {
+    align-self: center;
+    margin-bottom: 15px;
+}
+
+.project-tab {
+    padding: 5px;
+}
+
+.project-tab.selected {
+    background-color: cadetblue;
+}
+
+.todo-section {
+    padding: 25px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-tab {
+    padding: 5px 20px;
+    list-style-position: inside;
+
+}
+
+.todo-section li {
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.todo-section li.completed {
+    opacity: 0.5;
+}
+
+.todo-section li.low {
+    background-color: green;
+}
+
+.todo-section li.medium {
+    background-color: yellow;
+}
+
+.todo-section li.high {
+    background-color: red;
+}
+
+.todo-section .button-list {
+    display: flex;
+    gap: 15px;
+}
+
+.todo-section > button {
+    width: 50%;
+    align-self: center;
+}
+
+
